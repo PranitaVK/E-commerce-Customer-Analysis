@@ -195,7 +195,7 @@ count(*) as Total_orders from orders
 group by year(order_date),order_status
 order by year(order_date),order_status;
 
--- average order value
+-- average order values
 select round(sum(line_sales)/ count(distinct order_id),2) as Avg_order_value 
 from v_completed_order_sales;
 
